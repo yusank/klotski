@@ -39,3 +39,5 @@ If you want to load your game file：
 9.Input `q` for quit, please insure your game schedule is saved.
 
 Have a fun!
+
+![](http://oid1xlj7h.bkt.clouddn.com/image/jpg/Screen%20Shot%202017-09-01%20at%204.21.55%20PM.png)
