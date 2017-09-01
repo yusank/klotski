@@ -27,7 +27,7 @@
  *     Initial: 2017/08/31        Yusan Kurban
  */
 
-package main
+package application
 
 import (
 	"encoding/json"
