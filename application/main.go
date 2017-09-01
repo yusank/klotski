@@ -27,7 +27,7 @@
  *     Initial: 2017/08/30        Yusan Kurban
  */
 
-package application
+package main
 
 import (
 	"bufio"
@@ -114,7 +114,8 @@ func (c *character) move(x, y int) {
 
 // if the target pane is empty, it represent it`s valid movement, return true
 func (c *character) isValidMove(tx, ty int) bool {
-	var ok bool = true
+	var ok = true
+
 	for y, cov := range c.Cover {
 		if !ok {
 			break
