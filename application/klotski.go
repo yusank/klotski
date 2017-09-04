@@ -85,7 +85,7 @@ func initCharacter() {
 	cover11[0] = column
 
 	caoCao = character{
-		Name: "caoCao",
+		Name: "曹操",
 		Position: position{
 			X: 1,
 			Y: 0,
@@ -96,7 +96,7 @@ func initCharacter() {
 	all = append(all, &caoCao)
 
 	zhangFei = character{
-		Name: "zhangFei",
+		Name: "张飞",
 		Position: position{
 			X: 0,
 			Y: 0,
@@ -107,7 +107,7 @@ func initCharacter() {
 	all = append(all, &zhangFei)
 
 	zhaoYun = character{
-		Name: "zhaoYun",
+		Name: "赵云",
 		Position: position{
 			X: 3,
 			Y: 0,
@@ -118,7 +118,7 @@ func initCharacter() {
 	all = append(all, &zhaoYun)
 
 	huangZhong = character{
-		Name: "huangZhong",
+		Name: "黄忠",
 		Position: position{
 			X: 3,
 			Y: 2,
@@ -129,7 +129,7 @@ func initCharacter() {
 	all = append(all, &huangZhong)
 
 	maChao = character{
-		Name: "maChao",
+		Name: "马超",
 		Position: position{
 			X: 0,
 			Y: 2,
@@ -140,7 +140,7 @@ func initCharacter() {
 	all = append(all, &maChao)
 
 	guanYu = character{
-		Name: "guanYu",
+		Name: "关羽",
 		Position: position{
 			X: 1,
 			Y: 2,
@@ -151,7 +151,7 @@ func initCharacter() {
 	all = append(all, &guanYu)
 
 	zu = character{
-		Name: "zu",
+		Name: "小卒",
 		Position: position{
 			X: 0,
 			Y: 4,
@@ -162,7 +162,7 @@ func initCharacter() {
 	all = append(all, &zu)
 
 	bing = character{
-		Name: "bing",
+		Name: "小兵",
 		Position: position{
 			X: 1,
 			Y: 3,
@@ -173,7 +173,7 @@ func initCharacter() {
 	all = append(all, &bing)
 
 	shi = character{
-		Name: "shi",
+		Name: "小士",
 		Position: position{
 			X: 2,
 			Y: 3,
@@ -184,7 +184,7 @@ func initCharacter() {
 	all = append(all, &shi)
 
 	zuo = character{
-		Name: "zuo",
+		Name: "小佐",
 		Position: position{
 			X: 3,
 			Y: 4,

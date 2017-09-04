@@ -73,18 +73,18 @@ func setBoard() {
 
 // print current chess board
 func printBoard() {
-	fmt.Println("________________________")
+	fmt.Println("+----------------------------------------------+")
 	for _, col := range chessBoard {
 		for _, c := range col {
 			if c.Control == "" {
-				fmt.Printf("|    |")
+				fmt.Printf("|          |")
 			} else {
-				fmt.Printf("| %s |", c.Control)
+				fmt.Printf("| %s(%s) |", c.Name, c.Control)
 			}
 		}
 
 		fmt.Println()
-		fmt.Println("________________________")
+		fmt.Println("+----------------------------------------------+")
 	}
 
 }
