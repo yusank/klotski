@@ -1,6 +1,6 @@
 # Klotski
 
-![effect](https://github.com/yusank/klotski/screenshot.jpg)
+![effect](https://github.com/yusank/klotski/blob/master/screenshot.jpg)
 
 cd to `application`
 
