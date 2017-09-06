@@ -1,6 +1,6 @@
 # Klotski
 
-![effect](http://oid1xlj7h.bkt.clouddn.com/image/jpg/Screen%20Shot%202017-09-01%20at%204.21.55%20PM.png)
+![effect](https://github.com/yusank/klotski/screenshot.jpg)
 
 cd to `application`
 
