@@ -122,7 +122,7 @@ func (c *character) isValidMove(tx, ty int) bool {
 		}
 
 		for x := range cov {
-			if ty+y > 5 || ty+x > 4 {
+			if ty+y > 4 || tx+x > 3 {
 				ok = false
 				break
 			}
