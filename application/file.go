@@ -92,7 +92,8 @@ func readFile(fileName string) error {
 		return err
 	}
 
-	body := make([]byte, 435)
+	fileinfo, _ := file.Stat()
+	body := make([]byte, fileinfo.Size())
 	_, err = file.Read(body)
 	if err != nil {
 		return err
