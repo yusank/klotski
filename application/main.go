@@ -79,7 +79,7 @@ func printBoard() {
 			if c.Control == "" {
 				fmt.Printf("|          |")
 			} else {
-				fmt.Printf("| %s(%s) |", c.Name, c.Control)
+				c.Color.Printf("| %s(%s) |", c.Name, c.Control)
 			}
 		}
 

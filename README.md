@@ -7,6 +7,7 @@ cd to `application`
 and build ：
 
 ```shell
+go get github.com/fatih/color
 go build
 ```
 

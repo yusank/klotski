@@ -29,11 +29,16 @@
 
 package main
 
+import (
+	"github.com/fatih/color"
+)
+
 type character struct {
 	Name     string   //
 	Position position //
 	Cover    [][]int  //
 	Control  string   // short name
+	Color    *color.Color
 }
 
 type position struct {
@@ -92,6 +97,7 @@ func initCharacter() {
 		},
 		Cover:   cover22,
 		Control: "cc",
+		Color:   color.New(color.FgBlue),
 	}
 	all = append(all, &caoCao)
 
@@ -103,6 +109,7 @@ func initCharacter() {
 		},
 		Cover:   cover12,
 		Control: "zf",
+		Color:   color.New(color.FgHiGreen),
 	}
 	all = append(all, &zhangFei)
 
@@ -114,6 +121,7 @@ func initCharacter() {
 		},
 		Cover:   cover12,
 		Control: "zy",
+		Color:   color.New(color.FgGreen),
 	}
 	all = append(all, &zhaoYun)
 
@@ -125,6 +133,7 @@ func initCharacter() {
 		},
 		Cover:   cover12,
 		Control: "hz",
+		Color:   color.New(color.FgHiYellow),
 	}
 	all = append(all, &huangZhong)
 
@@ -136,6 +145,7 @@ func initCharacter() {
 		},
 		Cover:   cover12,
 		Control: "mc",
+		Color:   color.New(color.FgYellow),
 	}
 	all = append(all, &maChao)
 
@@ -147,6 +157,7 @@ func initCharacter() {
 		},
 		Cover:   cover21,
 		Control: "gy",
+		Color:   color.New(color.FgHiMagenta),
 	}
 	all = append(all, &guanYu)
 
@@ -158,6 +169,7 @@ func initCharacter() {
 		},
 		Cover:   cover11,
 		Control: "zu",
+		Color:   color.New(color.FgRed),
 	}
 	all = append(all, &zu)
 
@@ -169,6 +181,7 @@ func initCharacter() {
 		},
 		Cover:   cover11,
 		Control: "bi",
+		Color:   color.New(color.FgRed),
 	}
 	all = append(all, &bing)
 
@@ -180,6 +193,7 @@ func initCharacter() {
 		},
 		Cover:   cover11,
 		Control: "sh",
+		Color:   color.New(color.FgRed),
 	}
 	all = append(all, &shi)
 
@@ -191,6 +205,7 @@ func initCharacter() {
 		},
 		Cover:   cover11,
 		Control: "zo",
+		Color:   color.New(color.FgRed),
 	}
 	all = append(all, &zuo)
 }
