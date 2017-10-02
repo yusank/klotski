@@ -73,7 +73,7 @@ func setBoard() {
 
 // print current chess board
 func printBoard() {
-	fmt.Println("+----------------------------------------------+")
+	defaultColor.Println("+----------------------------------------------+")
 	for _, col := range chessBoard {
 		for _, c := range col {
 			if c.Control == "" {
@@ -84,7 +84,7 @@ func printBoard() {
 		}
 
 		fmt.Println()
-		fmt.Println("+----------------------------------------------+")
+		defaultColor.Println("+----------------------------------------------+")
 	}
 
 }
@@ -103,12 +103,11 @@ func (c *character) move(x, y int) {
 	tx, ty := c.Position.X+x, c.Position.Y+y
 	ok := c.isValidMove(tx, ty)
 	if !ok {
-		fmt.Println("you cannot move like that")
+		warnColor.Println("you cannot move like that")
 	} else {
 		c.Position.X = tx
 		c.Position.Y = ty
-		clearBoard()
-		setBoard()
+
 	}
 }
 
@@ -159,11 +158,11 @@ var inputReader *bufio.Reader
 
 // read user input
 func readInput() (op string) {
-	fmt.Print("Please input character name and move direction and divide with space:")
+	fmt.Print("Command:")
 	inputReader = bufio.NewReader(os.Stdin)
 	input, err := inputReader.ReadString('\n')
 	if err != nil {
-		fmt.Println("read failed")
+		errorColor.Println("read failed")
 		return op
 	}
 
@@ -182,58 +181,60 @@ func checkWin() (win bool) {
 
 // start to waiting user input, after input handle what user input
 func start() {
+	byeColor.Println("Please input character name and move direction and divide with space")
 	for {
+		clearBoard()
+		if checkWin() {
+			sucColor.Printf("\n Yaay,you win !!!! \n")
+			initCharacter()
+		}
+		setBoard()
+
 		operation := readInput()
 		if operation == "" {
 			continue
 		}
 
 		if operation == "q" {
-			fmt.Println("Thank you for playing.")
+			byeColor.Println("Thank you for playing.")
 			os.Exit(0)
 		}
 
 		if operation == "save" {
 			fileName, err := marshalAndSave()
 			if err != nil {
-				fmt.Printf("Save to file failed,please try again.|n")
+				errorColor.Printf("Save to file failed,please try again.\n")
 			}
-			fmt.Printf("Save to file %s \n", fileName)
+			sucColor.Printf("Save to file %s \n", fileName)
 			continue
 		}
 
 		sli := strings.Split(operation, " ")
 		if len(sli) != 3 {
-			fmt.Println("!!! wrong input")
+			errorColor.Println("!!! wrong input")
 			continue
 		}
 
 		char, ok := queryName(sli[0])
 		if !ok {
-			fmt.Println("!!! wrong character name")
+			errorColor.Println("!!! wrong character name")
 			continue
 		}
 
 		x, err := strconv.Atoi(sli[1])
 		if err != nil || !isValidInt(x) {
-			fmt.Println("!!! wrong input move")
+			errorColor.Println("!!! wrong input move")
 			continue
 		}
 
 		y, err := strconv.Atoi(sli[2])
 		if err != nil || !isValidInt(y) {
-			fmt.Println("!!! wrong input move")
+			errorColor.Println("!!! wrong input move")
 			continue
 		}
 
 		char.move(x, y)
 
-		if checkWin() {
-			fmt.Printf("\n Yaay,you win !!!! \n")
-			clearBoard()
-			initCharacter()
-			setBoard()
-		}
 	}
 }
 

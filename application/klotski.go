@@ -47,6 +47,12 @@ type position struct {
 }
 
 var (
+	defaultColor *color.Color
+	errorColor   *color.Color
+	warnColor    *color.Color
+	sucColor     *color.Color
+	byeColor     *color.Color
+
 	chessBoard = [][]character{}
 	cover22    = [][]int{}
 	cover12    = [][]int{}
@@ -67,6 +73,12 @@ var (
 )
 
 func initCharacter() {
+	defaultColor = color.New(color.FgHiCyan)
+	errorColor = color.New(color.FgRed)
+	warnColor = color.New(color.FgHiYellow)
+	sucColor = color.New(color.FgGreen)
+	byeColor = color.New(color.FgBlue)
+
 	cover22 = make([][]int, 2)
 	for i := range cover22 {
 		column := make([]int, 2)
