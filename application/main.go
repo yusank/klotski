@@ -273,7 +273,7 @@ func main() {
 		}
 	}
 
-	setBoard()
+	//setBoard()
 	printTips()
 	start()
 }
