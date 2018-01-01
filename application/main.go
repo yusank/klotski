@@ -67,7 +67,6 @@ func setBoard() {
 			}
 		}
 	}
-
 	printBoard()
 }
 

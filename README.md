@@ -42,4 +42,3 @@ If you want to load your game file：
 9.Input `q` for quit, please insure your game schedule is saved.
 
 Have a fun!
-
